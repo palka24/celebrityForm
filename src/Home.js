@@ -29,7 +29,7 @@ function Home() {
     }
     
     setIsDataLoading(true);
-    console.log('handlesave started');
+
     const data = {
       name,
       email,
@@ -39,7 +39,6 @@ function Home() {
 
     axios.post('http://localhost:4000/submit-form', data)
     .then(() => {
-      console.log('form submitted!!');
       setName('');
       setEmail('');
       setPhone('');
